@@ -1,8 +1,8 @@
-import "./style.css"
+import { StyledStarIcon } from "./styles";
 
-const CatFeature = {
+export const CatFeature = {
     NEW: "new",
-    SOFT: "sort"
+    SOFT: "soft"
 };
 
 function StarIcon({ className = "", feature }) {
@@ -30,13 +30,10 @@ function StarIcon({ className = "", feature }) {
     }
 
     return options.text ? (
-        <span
-            className={`star-icon ${className}`}
-            style={{ backgroundColor: options.bgColor }}
-        >
+        <StyledStarIcon className={className} $bgColor={options.bgColor}>
             {options.text}
-        </span>
+        </StyledStarIcon>
     ) : null;
 }
 
-export { CatFeature, StarIcon }
+export default StarIcon;

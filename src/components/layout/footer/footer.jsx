@@ -1,12 +1,12 @@
 import Logo from "../../ui/logo/logo"
-import "./style.css"
+import { StyledSection, Copyright } from "./styles";
 
 function Footer() {
     return (
-    <footer className="footer">
+    <StyledSection as="footer">
         <Logo />
-        <span className="footer__copyright">Создано 2024</span>
-    </footer>
+        <Copyright>Создано 2024</Copyright>
+    </StyledSection>
     )
 }
 

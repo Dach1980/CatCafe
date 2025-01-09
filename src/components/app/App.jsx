@@ -1,10 +1,13 @@
 import PageWrapper from '../layout/page-wrapper/page-wrapper.jsx'
-import './Style.css'
 import starList from '../../mocks/starList.jsx'
+import { GlobalStyle } from "./styles.jsx";
 
 function App() {
   return (
-    <PageWrapper stars={starList} />
+    <>
+      <GlobalStyle />
+      <PageWrapper stars={starList}>Контент страницы</PageWrapper>
+    </>
   )
 }
 

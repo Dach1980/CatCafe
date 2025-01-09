@@ -1,15 +1,16 @@
 import Logo from "../../ui/logo/logo"
 import Nav from "../nav/nav"
-import "./style.css"
+import { StyledSection } from "./styles";
 
-
-function Header() {
+// шапка сайта
+function Header({
+    pageUrl // урл страницы
+}) {
     return (
-        <header className="header">
+        <StyledSection as="header">
             <Logo />
-            <Nav />
-        </header>
-    )
+            <Nav pageUrl={pageUrl} />
+        </StyledSection>
+    );
 }
-
 export default Header

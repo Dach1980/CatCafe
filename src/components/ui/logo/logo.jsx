@@ -1,12 +1,12 @@
-import "./style.css"
 import logo from "../../../assets/logo.svg"
+import { Text, StyledLogo } from "./styles";
 
 function Logo() {
     return (
-        <a href="/" className="logo__link">
+        <StyledLogo href="/">
             <img src={logo} alt="Логотип" />
-            <span className="logo__text">Котокафе</span>
-        </a>
+            <Text>Котокафе</Text>
+        </StyledLogo>
     )
 }
 

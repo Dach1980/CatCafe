@@ -1,13 +1,32 @@
-import "./style.css"
+import { StyledTitle } from "./styles";
 
-const TitleSize = {
+export const TitleSize = {
     BIG: "big",
     SMALL: "small",
     DEFAULT: ""
 };
 
-function Title({ children, size }) {
-    return <h1 className={`title${size ? ` title_${size}` : ""}`}>{children}</h1>
+export const TitleLevel = {
+    H1: "1",
+    H2: "2",
+    H3: "3",
+    H4: "4",
+    H5: "5",
+    H6: "6"
+};
+
+// Заголовок
+function Title({
+    level = 1, // уровень h1, h2 и другие. TitleLevel
+    size, // размер заголовка TitleSize
+    children, // дочерний элемент, который будет отображён в заголовке
+    className
+}) {
+    return (
+        <StyledTitle as={`h${level}`} $size={size} className={className}>
+            {children}
+        </StyledTitle>
+    );
 }
 
-export { TitleSize, Title }
+export default Title;
