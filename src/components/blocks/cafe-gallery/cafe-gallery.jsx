@@ -6,7 +6,7 @@ import Gallery from "../../ui/gallery/gallery";
 function CafeGallery({ slides }) {
     console.log(slides);
 
-  return slides?.length ? (
+    return slides && slides.length ? (
     <StyledSection>
       <StyledTitle level={2} size={TitleSize.BIG}>
         Галерея нашего кафе

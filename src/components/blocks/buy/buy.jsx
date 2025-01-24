@@ -27,7 +27,9 @@ function Buy({
   const price = duration * (type ? type.price : 0);
 
   // преобразуем ticketOptions в данные для аккордеона
-  const accordionContent = ticketOptions.map((option) => ({
+  const accordionContent = 
+  canBuy &&
+  ticketOptions.map((option) => ({
     id: option.id,
     title: (
       <RadioButton
@@ -88,8 +90,10 @@ function Buy({
           <Label $small $margin={6}>
             Цена
           </Label>
-          <Price>{price}</Price>
-          <Button minWidth={460} onClick={handleBuy}>Купить билет</Button>
+          <Price>{price} руб.</Price>
+          <Button minWidth={460} onClick={handleBuy}>
+            Купить билет
+          </Button>
         </Form>
       ) : (
         <p>Покупка билетов временно недоступна</p>

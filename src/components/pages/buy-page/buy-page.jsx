@@ -1,8 +1,7 @@
-import buyOptions from "../../../mocks/buyOptions";
 import Buy from "../../blocks/buy/buy";
 import CafeGallery from "../../blocks/cafe-gallery/cafe-gallery";
 
-function BuyPage({ slides }) {
+function BuyPage({ slides, buyOptions }) {
     return (
         <>
             <CafeGallery slides={slides} />

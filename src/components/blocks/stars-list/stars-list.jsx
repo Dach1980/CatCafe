@@ -1,27 +1,31 @@
 import Title from "../../ui/title/title.jsx"
 import StarCard from "../../ui/star-card/star-card.jsx"
 import Button from "../../ui/button/button.jsx"
-import "./style.css"
+import { StarItem, StarList, StyledStarsList } from "./style.jsx";
 
-function StarsList({ stars, level }) {
+// список известных котов
+function StarsList({
+    stars, // коты
+    level // уровень заголовка списка.
+}) {
     return (
-        <section className="star-list">
+        <StyledStarsList>
             {stars?.length ? (
                 <>
                     <Title level={level}>Наши звёзды</Title>
-                    <ul className="star-list__list">
+                    <StarList $isGridList>
                         {stars.map((star) => (
-                            <li className="star-list__item" key={star.id}>
+                            <StarItem key={star.id}>
                                 <StarCard {...star} />
-                            </li>
+                            </StarItem>
                         ))}
-                    </ul>
-                    <Button minWidth={353} link="/buy">
-                        Купить билет
-                    </Button>
+                    </StarList>
                 </>
             ) : null}
-        </section>
+            <Button minWidth={353} link="/buy">
+                Купить билет
+            </Button>
+        </StyledStarsList>
     );
 }
 

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Li, Section, Ul } from "../../styled";
-import starsImage from "../../../assets/stars-image.cmp.svg";
-import startLeft from "../../../assets/stars-left.cmp.svg";
-import startRight from "../../../assets/stars-right.cmp.svg";
+import starsImage from "../../../assets/stars-image.svg";
+import startLeft from "../../../assets/stars-left.svg";
+import startRight from "../../../assets/stars-right.svg";
 
 export const StyledStarsList = styled(Section)`
   position: relative;
